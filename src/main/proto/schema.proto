@@ -1,0 +1,20 @@
+syntax = "proto3";
+ 
+package example;
+ 
+option java_package = "com.example.service";
+option java_multiple_files = true;
+ 
+service EmployService {
+    rpc getEmployId(EmployeRequest) returns (EmployeResponse);
+}
+ 
+message EmployeRequest {
+    int32 id = 1;
+    string name = 2;
+}
+ 
+message EmployeResponse {
+  
+    string message = 4;
+}
